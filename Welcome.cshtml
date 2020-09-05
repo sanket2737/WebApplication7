@@ -1,0 +1,32 @@
+﻿@using System.Security.Claims;
+@model WebApplication7.Models.ExtendedIdentityUserModel
+
+@{
+    ViewData["Title"] = "About";
+}
+
+<h1>Welcome - <b>@ViewBag.Message</b></h1>
+
+
+
+<h2>User Information:</h2>
+<br />
+<table border="1">
+    <h4>
+        <tr>
+            <td>
+                Email : </td>
+            <td>@Model.Email</td>
+            </tr>
+    </h4>
+    <h4>
+        <tr>
+            <td>
+                UserName :
+            </td>
+            <td>@Model.UserName</td>
+        </tr>
+    </h4>
+</table>
+
+<a asp-controller="Home" asp-action="EditDetails" asp-route-Name="@Model.UserName">Edit</a>
